@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-white font-semibold py-2 px-4 rounded-lg 
+           transition duration-200 ease-in-out focus:outline-none focus:ring-2 
+           focus:ring-primary focus:ring-opacity-50;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary hover:bg-secondary-dark text-white font-semibold py-2 px-4 rounded-lg 
+           transition duration-200 ease-in-out focus:outline-none focus:ring-2 
+           focus:ring-secondary focus:ring-opacity-50;
+  }
+  
+  .input-field {
+    @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none 
+           focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-lg shadow-sm p-6;
+  }
+
+  /* React DatePicker Custom Styles */
+  .react-datepicker-wrapper {
+    @apply w-full;
+  }
+
+  .react-datepicker {
+    @apply border-0 rounded-lg shadow-lg !important;
+    font-family: 'Montserrat', sans-serif !important;
+  }
+
+  .react-datepicker__triangle {
+    @apply hidden !important;
+  }
+
+  .react-datepicker__header {
+    @apply bg-primary/5 border-none rounded-t-lg pb-4 !important;
+  }
+
+  .react-datepicker__current-month {
+    @apply text-navy font-semibold py-2 !important;
+  }
+
+  .react-datepicker__day-name {
+    @apply text-gray-500 font-medium !important;
+    width: 2rem !important;
+    line-height: 2rem !important;
+    margin: 0.2rem !important;
+  }
+
+  .react-datepicker__day {
+    @apply text-gray-700 rounded-md transition-colors !important;
+    width: 2rem !important;
+    line-height: 2rem !important;
+    margin: 0.2rem !important;
+  }
+
+  .react-datepicker__day:hover {
+    @apply bg-primary/10 text-primary !important;
+  }
+
+  .react-datepicker__day--selected,
+  .react-datepicker__day--keyboard-selected {
+    @apply bg-primary text-white hover:bg-primary-dark !important;
+  }
+
+  .react-datepicker__day--today {
+    @apply font-bold text-primary !important;
+  }
+
+  .react-datepicker__time-container {
+    @apply border-l border-gray-100 !important;
+  }
+
+  .react-datepicker__time-list {
+    @apply !p-0 !important;
+  }
+
+  .react-datepicker__time-list-item {
+    @apply text-sm text-gray-700 hover:bg-primary/10 hover:text-primary transition-colors !important;
+    height: 2rem !important;
+    line-height: 2rem !important;
+    padding: 0 1rem !important;
+  }
+
+  .react-datepicker__time-list-item--selected {
+    @apply bg-primary text-white hover:bg-primary-dark !important;
+  }
+
+  .react-datepicker__input-time-container {
+    @apply mx-0 px-4 py-2 border-t border-gray-100 !important;
+  }
+
+  .react-datepicker-time__input {
+    @apply outline-none border border-gray-200 rounded px-2 py-1 !important;
+  }
+
+  .react-datepicker-time__input:focus {
+    @apply border-primary !important;
+  }
+
+  .react-datepicker__month-container {
+    @apply p-2 !important;
+  }
+
+  /* React Select Custom Styles */
+  .react-select-container .react-select__control {
+    @apply input-field;
+  }
+
+  .react-select-container .react-select__menu {
+    @apply mt-1 bg-white border border-gray-300 rounded-lg shadow-lg;
+  }
+
+  .react-select-container .react-select__option {
+    @apply px-4 py-2 hover:bg-primary/10 cursor-pointer;
+  }
+
+  .react-select-container .react-select__option--is-selected {
+    @apply bg-primary text-white;
+  }
+}
